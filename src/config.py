@@ -13,12 +13,11 @@ def get_llm():
     #         model="gpt-4o-mini",
     #         temperature=0.2
     #     )
-    if os.getenv("AIRCS_AI_API_KEY"):
+    if os.getenv("GROQ_API_KEY"):
         return LLM(
-            # model="groq/llama-3.1-8b-instant",
-            model=os.getenv("AI_MODEL"),
-            api_key=os.getenv("AIRCS_AI_API_KEY"),
-            base_url=os.getenv("AIRCS_AI_API_URL")
+            model="groq/llama-3.1-8b-instant",
+            api_key=os.getenv("GROQ_API_KEY")
+            #base_url=os.getenv("AIRCS_AI_API_URL")
         )
     else:
         return LLM(

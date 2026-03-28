@@ -58,7 +58,7 @@ create_pr = st.sidebar.checkbox("Auto Create PR")
 # Input
 feature_request = st.text_area(
     "💡 Enter Feature Request",
-    placeholder="Create a simple python program that cretaes simple stories for kids"
+    placeholder="Enter your prompt"
 )
 
 # Run button

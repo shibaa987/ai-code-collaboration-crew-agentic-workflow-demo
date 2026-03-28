@@ -19,7 +19,8 @@ class GitHubPRTool(BaseTool):
 
         branch_name = f"ai-update-{uuid.uuid4().hex[:6]}"
 
-        base = repo.get_branch("main")
+        # base = repo.get_branch("main")
+        base = repo.get_branch("feature/ui")
         repo.create_git_ref(ref=f"refs/heads/{branch_name}", sha=base.commit.sha)
 
         filename = "generated_code.py"
